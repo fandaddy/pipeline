@@ -63,7 +63,7 @@ deploy:
    - internal/docker-push:
        username: $DOCKER_USERNAME
        password: $DOCKER_PASSWORD
-       cmd: /book-pipeline/main
+       cmd: main
        port: "8080"
        tag: latest
        repository: jiangxiaobai1989/book-pipeline
