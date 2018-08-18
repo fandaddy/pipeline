@@ -44,7 +44,7 @@ build:
     - script:
         name: go build
         code: |
-          go build
+          go build -o main
 
     # Test the project
     - script:
@@ -63,7 +63,7 @@ deploy:
    - internal/docker-push:
        username: $DOCKER_USERNAME
        password: $DOCKER_PASSWORD
-       cmd: /pipeline/pipeline
+       cmd: /pipeline/main
        port: "8080"
        tag: latest
        repository: jiangxiaobai1989/book-pipeline
